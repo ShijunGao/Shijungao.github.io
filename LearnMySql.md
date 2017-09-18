@@ -1,9 +1,13 @@
 #### 利用Doker实现局部安装MySql Server
+参考链接：
 > http://blog.knowncold.me/2017/09/16/docker-sql-server
 
+>https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-configure-docker
+
 Windows：
-*1、以下均使用管理员模式下的powershall或cmd*
-*2、Docker在windows上是运行在hyper-v上的，所以家庭版没有hyper-v是无法使用*
+>*1、以下均使用管理员模式下的powershall或cmd*
+
+>*2、Docker在windows上是运行在hyper-v上的，所以家庭版没有hyper-v是无法使用*
 
 * 安装Doker
 * 将Doker内存调制4GB
