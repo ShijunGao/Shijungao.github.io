@@ -1,3 +1,4 @@
+```
 4
 
 SELECT ENAME,JOB,HIREDATE,SAL
@@ -8,12 +9,12 @@ WHERE DEPTNO = 10
 
 5
 
-SELECT DISTINCT JOB 
+SELECT DISTINCT JOB
 FROM EMP
 
 6
 
-SELECT ename,sal*12+isnull(comm,0)*12 as "Salary Of Year" 
+SELECT ename,sal*12+isnull(comm,0)*12 as "Salary Of Year"
 FROM EMP
 
 
@@ -25,14 +26,14 @@ FROM emp
 
 8
 
-SELECT ename, sal 
+SELECT ename, sal
 FROM emp
 WHERE JOB = 'MANAGER'
 
 
 9
 
-SELECT ename, sal 
+SELECT ename, sal
 FROM emp
 WHERE ENAME LIKE '__o%'
 
@@ -50,7 +51,7 @@ WHERE JOB = 'SALESMAN' OR JOB = 'MANAGER'
 
 
 
-SELECT ename 
+SELECT ename
 FROM emp
 WHERE COMM IS NULL
 
@@ -73,22 +74,24 @@ ORDER BY SAL DESC
 
 14
 
+```
 
-SELECT MAX(SAL) AS '◊Ó∏ﬂπ§◊ ' , min(sal) as '◊ÓµÕπ§◊ ' 
+```
+SELECT MAX(SAL) AS 'ÊúÄÈ´òÂ∑•ËµÑ' , min(sal) as 'ÊúÄ‰ΩéÂ∑•ËµÑ'
 FROM emp
 
 
 
 15
 
-SELECT avg (sal) as '∆Ωæ˘π§◊ ',SUM(sal) as '◊‹º∆π§◊ '
+SELECT avg (sal) as 'Âπ≥ÂùáÂ∑•ËµÑ',SUM(sal) as 'ÊÄªËÆ°Â∑•ËµÑ'
 FROM emp
 
 
 
 16
 
-SELECT  ROUND(CAST (COUNT (COMM)AS FLOAT)/COUNT(*),12) 
+SELECT  ROUND(CAST (COUNT (COMM)AS FLOAT)/COUNT(*),12)
 FROM emp
 
 
@@ -124,3 +127,5 @@ ORDER BY AVG(SAL) ASC
 
 
 
+
+```
