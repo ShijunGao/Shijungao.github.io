@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../SQL Server/" />
+    <link rel="next" href="../SQL/" />
     
     
     <link rel="prev" href="LearnMySql.html" />
@@ -102,12 +102,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../SQL Server/">
+        <li class="chapter " data-level="1.2" data-path="../SQL/">
             
-                <a href="../SQL Server/">
+                <a href="../SQL/">
             
                     
-                    SQL Server
+                    SQL
             
                 </a>
             
@@ -116,12 +116,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../SQL Server/Note.html">
+        <li class="chapter " data-level="1.2.1" data-path="../SQL/">
             
-                <a href="../SQL Server/Note.html">
+                <a href="../SQL/">
             
                     
-                    Note
+                    SQL_Note
             
                 </a>
             
@@ -161,9 +161,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../SQL Server/">
+        <li class="chapter " data-level="1.2.2" data-path="../SQL/">
             
-                <a href="../SQL Server/">
+                <a href="../SQL/">
             
                     
                     HomeWork
@@ -217,7 +217,7 @@
                 <a href="../计算几何与计算机图形学/">
             
                     
-                    Note
+                    CG_Note
             
                 </a>
             
@@ -364,7 +364,7 @@
                 <a href="../网络信息安全概论/">
             
                     
-                    Note
+                    Secutity_Note
             
                 </a>
             
@@ -557,7 +557,88 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="sqlservernote">SQLServerNote</h1>
+                                <h4 id="sql-server-note">SQL Server Note</h4>
+<h5 id="inventory-"><em> inventory </em></h5>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Apple</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Banana</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>SELECT<pre><code class="lang-DML">SELECT id FROM inventory
+SELECT * FROM inventory        //SELECT ALL
+SELECT DISTINCT * FROM inventory      //&#x53BB;&#x91CD;&#xFF0C;&#x653E;&#x5728;&#x5217;&#x4E4B;&#x524D;
+</code></pre>
+</li>
+<li>WHERE<pre><code class="lang-DML">//&#x6761;&#x4EF6;
+SELECT * FROM inventory
+WHERE id = 1  ||  WHERE name = &apos;Apple&apos;  ||  WHERE name is null
+</code></pre>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x8FD0;&#x7B97;&#x7B26;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;&gt;</td>
+<td>&#x4E0D;&#x7B49;&#x4E8E;</td>
+</tr>
+<tr>
+<td>like</td>
+<td>&#x81EA;&#x5B9A;&#x4E49;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>AND OR<ul>
+<li>NULL AND TRUE =NULL</li>
+<li>NULL OR  FALSE= NULL</li>
+</ul>
+</li>
+<li>ORDER BY<ul>
+<li>ORDER BY 3,2</li>
+</ul>
+</li>
+<li>INSERT<ul>
+<li>INSERT INTO inventory VALUES (3, &apos; Banana&apos;)</li>
+</ul>
+</li>
+<li><p>GROUP BY</p>
+</li>
+<li><p>isnull()==nvl()</p>
+</li>
+<li>sal*12+isnull(comm ,0 ) as &quot;Salary Of Year&quot;</li>
+<li>WHERE ENAME LIKE &apos;__o%&apos;</li>
+<li>ORDER BY ID DESE OR ASC</li>
+<li>MAX()   MIN()</li>
+<li>ROUND( CAST ( COUNT (COMM) AS FLOAT) )/COUNT(*),12)<ul>
+<li>ROUND(NUM,12)</li>
+<li>CAST(INT AS FLOAT)</li>
+</ul>
+</li>
+<li>GROUP BY DEPTON HAVING AVG(sal)&lt;2500<ul>
+<li>HAVING</li>
+</ul>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -590,7 +671,7 @@
                 </a>
                 
                 
-                <a href="../SQL Server/" class="navigation navigation-next " aria-label="Next page: HomeWork">
+                <a href="../SQL/" class="navigation navigation-next " aria-label="Next page: HomeWork">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -601,7 +682,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SQLServerNote","level":"1.2.1.2","depth":3,"next":{"title":"HomeWork","level":"1.2.2","depth":2,"path":"SQL Server/README.md","ref":"SQL Server/README.md","articles":[{"title":"Firsthomework","level":"1.2.2.1","depth":3,"path":"HomeWork/firsthomework.md","ref":"HomeWork/firsthomework.md","articles":[]}]},"previous":{"title":"LearnMySql","level":"1.2.1.1","depth":3,"path":"Note/LearnMySql.md","ref":"Note/LearnMySql.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Note/SQLServerNote.md","mtime":"2017-09-21T13:43:31.371Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-21T13:47:17.555Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SQLServerNote","level":"1.2.1.2","depth":3,"next":{"title":"HomeWork","level":"1.2.2","depth":2,"path":"SQL/README.md","ref":"SQL/README.md","articles":[{"title":"Firsthomework","level":"1.2.2.1","depth":3,"path":"HomeWork/firsthomework.md","ref":"HomeWork/firsthomework.md","articles":[]}]},"previous":{"title":"LearnMySql","level":"1.2.1.1","depth":3,"path":"Note/LearnMySql.md","ref":"Note/LearnMySql.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Note/SQLServerNote.md","mtime":"2017-09-20T12:30:40.663Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-21T14:52:18.151Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

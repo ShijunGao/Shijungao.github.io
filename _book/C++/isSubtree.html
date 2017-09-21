@@ -102,12 +102,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../SQL Server/">
+        <li class="chapter " data-level="1.2" data-path="../SQL/">
             
-                <a href="../SQL Server/">
+                <a href="../SQL/">
             
                     
-                    SQL Server
+                    SQL
             
                 </a>
             
@@ -116,12 +116,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../SQL Server/Note.html">
+        <li class="chapter " data-level="1.2.1" data-path="../SQL/">
             
-                <a href="../SQL Server/Note.html">
+                <a href="../SQL/">
             
                     
-                    Note
+                    SQL_Note
             
                 </a>
             
@@ -161,9 +161,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../SQL Server/">
+        <li class="chapter " data-level="1.2.2" data-path="../SQL/">
             
-                <a href="../SQL Server/">
+                <a href="../SQL/">
             
                     
                     HomeWork
@@ -217,7 +217,7 @@
                 <a href="../计算几何与计算机图形学/">
             
                     
-                    Note
+                    CG_Note
             
                 </a>
             
@@ -364,7 +364,7 @@
                 <a href="../网络信息安全概论/">
             
                     
-                    Note
+                    Secutity_Note
             
                 </a>
             
@@ -557,7 +557,54 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="issubtree">isSubtree</h1>
+                                <pre><code class="lang-C++"> <span class="hljs-comment">/**
+ * Definition of TreeNode:
+ * class TreeNode {
+ * public:
+ *     int val;
+ *     TreeNode *left, *right;
+ *     TreeNode(int val) {
+ *         this-&gt;val = val;
+ *         this-&gt;left = this-&gt;right = NULL;
+ *     }
+ * }
+ */</span>
+
+
+ <span class="hljs-keyword">class</span> Solution {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-comment">/*
+    * @param T1: The roots of binary tree T1.
+    * @param T2: The roots of binary tree T2.
+    * @return: True if T2 is a subtree of T1, or false.
+    */</span>
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">isSubtree</span><span class="hljs-params">(TreeNode * T1, TreeNode * T2)</span> </span>{
+        <span class="hljs-comment">// write your code here</span>
+        <span class="hljs-keyword">if</span> (T2 == <span class="hljs-literal">nullptr</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+        <span class="hljs-keyword">if</span> (T1 == <span class="hljs-literal">nullptr</span>&amp;&amp;T2 != <span class="hljs-literal">nullptr</span>)                   <span class="hljs-comment">//&#x4E0D;&#x52A0;&#x5224;&#x65AD;&#x4F1A;&#x5BFC;&#x81F4;&#x6307;&#x9488;&#x62A5;&#x9519;&#xFF0C;&#x5E94;&#x8BE5;&#x662F;T1&#x904D;&#x5386;&#x5B8C;&#x5DE6;&#x5B50;&#x6811;&#x5411;&#x53F3;&#x8DF3;&#x65F6;&#x51FA;&#x9519;</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+        <span class="hljs-keyword">if</span> (IsSame(T1, T2))                                 <span class="hljs-comment">//&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x4E8C;&#x53C9;&#x6811;&#x662F;&#x5426;&#x76F8;&#x540C;</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+        <span class="hljs-keyword">if</span> (isSubtree(T1-&gt;left, T2))
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+        <span class="hljs-keyword">if</span> (isSubtree(T1-&gt;right, T2))
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">IsSame</span><span class="hljs-params">(TreeNode * T1, TreeNode * T2)</span> </span>{                         <span class="hljs-comment">//&#x9012;&#x5F52;&#x904D;&#x5386; &#x5224;&#x65AD;</span>
+        <span class="hljs-keyword">if</span> (T1 == <span class="hljs-literal">nullptr</span>&amp;&amp;T2 == <span class="hljs-literal">nullptr</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+        <span class="hljs-keyword">if</span> (T1 == <span class="hljs-literal">nullptr</span>&amp;&amp;T2 != <span class="hljs-literal">nullptr</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+        <span class="hljs-keyword">if</span> (T1 != <span class="hljs-literal">nullptr</span>&amp;&amp;T2 == <span class="hljs-literal">nullptr</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+        <span class="hljs-keyword">if</span> (T1-&gt;val != T2-&gt;val)
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+        <span class="hljs-keyword">return</span> IsSame(T1-&gt;left, T2-&gt;left) &amp;&amp; IsSame(T1-&gt;right, T2-&gt;right);
+    }
+ };
+</code></pre>
 
                                 
                                 </section>
@@ -601,7 +648,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"isSubtree","level":"1.7.1.2","depth":3,"next":{"title":"longest","level":"1.7.1.3","depth":3,"path":"C++/longest.md","ref":"C++/longest.md","articles":[]},"previous":{"title":"FindMissing","level":"1.7.1.1","depth":3,"path":"C++/FindMissing.md","ref":"C++/FindMissing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"C++/isSubtree.md","mtime":"2017-09-21T13:43:31.415Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-21T13:47:17.555Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"isSubtree","level":"1.7.1.2","depth":3,"next":{"title":"longest","level":"1.7.1.3","depth":3,"path":"C++/longest.md","ref":"C++/longest.md","articles":[]},"previous":{"title":"FindMissing","level":"1.7.1.1","depth":3,"path":"C++/FindMissing.md","ref":"C++/FindMissing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"C++/isSubtree.md","mtime":"2017-09-21T13:32:23.261Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-21T14:52:18.151Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

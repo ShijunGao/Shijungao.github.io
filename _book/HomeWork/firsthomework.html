@@ -60,7 +60,7 @@
     <link rel="next" href="../计算几何与计算机图形学/" />
     
     
-    <link rel="prev" href="../SQL Server/" />
+    <link rel="prev" href="../SQL/" />
     
 
     </head>
@@ -102,12 +102,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../SQL Server/">
+        <li class="chapter " data-level="1.2" data-path="../SQL/">
             
-                <a href="../SQL Server/">
+                <a href="../SQL/">
             
                     
-                    SQL Server
+                    SQL
             
                 </a>
             
@@ -116,12 +116,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../SQL Server/Note.html">
+        <li class="chapter " data-level="1.2.1" data-path="../SQL/">
             
-                <a href="../SQL Server/Note.html">
+                <a href="../SQL/">
             
                     
-                    Note
+                    SQL_Note
             
                 </a>
             
@@ -161,9 +161,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../SQL Server/">
+        <li class="chapter " data-level="1.2.2" data-path="../SQL/">
             
-                <a href="../SQL Server/">
+                <a href="../SQL/">
             
                     
                     HomeWork
@@ -217,7 +217,7 @@
                 <a href="../计算几何与计算机图形学/">
             
                     
-                    Note
+                    CG_Note
             
                 </a>
             
@@ -364,7 +364,7 @@
                 <a href="../网络信息安全概论/">
             
                     
-                    Note
+                    Secutity_Note
             
                 </a>
             
@@ -557,8 +557,127 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="firsthomework">Firsthomework</h1>
+                                <pre><code>4
 
+SELECT ENAME,JOB,HIREDATE,SAL
+FROM EMP
+WHERE DEPTNO = 10
+
+
+
+5
+
+SELECT DISTINCT JOB
+FROM EMP
+
+6
+
+SELECT ename,sal*12+isnull(comm,0)*12 as &quot;Salary Of Year&quot;
+FROM EMP
+
+
+7
+
+SELECT ename, sal+ISNULL(comm,0) as total
+FROM emp
+
+
+8
+
+SELECT ename, sal
+FROM emp
+WHERE JOB = &apos;MANAGER&apos;
+
+
+9
+
+SELECT ename, sal
+FROM emp
+WHERE ENAME LIKE &apos;__o%&apos;
+
+10
+
+
+
+SELECT ename, sal ,JOB
+FROM emp
+WHERE JOB = &apos;SALESMAN&apos; OR JOB = &apos;MANAGER&apos;
+
+
+
+11
+
+
+
+SELECT ename
+FROM emp
+WHERE COMM IS NULL
+
+
+12
+
+
+SELECT ename ,SAL ,COMM
+FROM emp
+WHERE COMM IS NOT NULL
+
+
+13
+
+
+SELECT ename ,SAL  
+FROM emp
+ORDER BY SAL DESC
+
+
+14
+</code></pre><pre><code>SELECT MAX(SAL) AS &apos;&#x6700;&#x9AD8;&#x5DE5;&#x8D44;&apos; , min(sal) as &apos;&#x6700;&#x4F4E;&#x5DE5;&#x8D44;&apos;
+FROM emp
+
+
+
+15
+
+SELECT avg (sal) as &apos;&#x5E73;&#x5747;&#x5DE5;&#x8D44;&apos;,SUM(sal) as &apos;&#x603B;&#x8BA1;&#x5DE5;&#x8D44;&apos;
+FROM emp
+
+
+
+16
+
+SELECT  ROUND(CAST (COUNT (COMM)AS FLOAT)/COUNT(*),12)
+FROM emp
+
+
+17
+SELECT  JOB,AVG(SAL) AS AVERAGE
+FROM emp
+GROUP BY JOB
+
+18
+
+
+SELECT  DEPTNO,JOB,AVG(SAL) AS AVERAGE,MAX(SAL)
+FROM emp
+GROUP BY DEPTNO,JOB
+
+
+19
+
+SELECT  DEPTNO,AVG(SAL) AS AVERAGE,MAX(SAL) AS MAX
+FROM emp
+GROUP BY DEPTNO HAVING AVG(SAL)&lt;2500
+
+
+
+20
+
+
+SELECT  DEPTNO,AVG(SAL) AS AVERAGE,MAX(SAL) AS MAX
+FROM emp
+GROUP BY DEPTNO HAVING AVG(SAL)&lt;2500
+ORDER BY AVG(SAL) ASC
+</code></pre>
                                 
                                 </section>
                             
@@ -585,7 +704,7 @@
 
             
                 
-                <a href="../SQL Server/" class="navigation navigation-prev " aria-label="Previous page: HomeWork">
+                <a href="../SQL/" class="navigation navigation-prev " aria-label="Previous page: HomeWork">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -601,7 +720,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Firsthomework","level":"1.2.2.1","depth":3,"next":{"title":"计算几何与计算机图形学","level":"1.3","depth":1,"path":"计算几何与计算机图形学/README.md","ref":"计算几何与计算机图形学/README.md","articles":[{"title":"Note","level":"1.3.1","depth":2,"path":"计算几何与计算机图形学/README.md","ref":"计算几何与计算机图形学/README.md","articles":[{"title":"Gauss-Bonnet","level":"1.3.1.1","depth":3,"path":"Note/Gauss-Bonnet.md","ref":"Note/Gauss-Bonnet.md","articles":[]}]}]},"previous":{"title":"HomeWork","level":"1.2.2","depth":2,"path":"SQL Server/README.md","ref":"SQL Server/README.md","articles":[{"title":"Firsthomework","level":"1.2.2.1","depth":3,"path":"HomeWork/firsthomework.md","ref":"HomeWork/firsthomework.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"HomeWork/firsthomework.md","mtime":"2017-09-21T13:43:31.388Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-21T13:47:17.555Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Firsthomework","level":"1.2.2.1","depth":3,"next":{"title":"计算几何与计算机图形学","level":"1.3","depth":1,"path":"计算几何与计算机图形学/README.md","ref":"计算几何与计算机图形学/README.md","articles":[{"title":"CG_Note","level":"1.3.1","depth":2,"path":"计算几何与计算机图形学/README.md","ref":"计算几何与计算机图形学/README.md","articles":[{"title":"Gauss-Bonnet","level":"1.3.1.1","depth":3,"path":"Note/Gauss-Bonnet.md","ref":"Note/Gauss-Bonnet.md","articles":[]}]}]},"previous":{"title":"HomeWork","level":"1.2.2","depth":2,"path":"SQL/README.md","ref":"SQL/README.md","articles":[{"title":"Firsthomework","level":"1.2.2.1","depth":3,"path":"HomeWork/firsthomework.md","ref":"HomeWork/firsthomework.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"HomeWork/firsthomework.md","mtime":"2017-09-21T12:20:20.619Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-21T14:52:18.151Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -1,2 +1,131 @@
-# Firsthomework
+```
+4
 
+SELECT ENAME,JOB,HIREDATE,SAL
+FROM EMP
+WHERE DEPTNO = 10
+
+
+
+5
+
+SELECT DISTINCT JOB
+FROM EMP
+
+6
+
+SELECT ename,sal*12+isnull(comm,0)*12 as "Salary Of Year"
+FROM EMP
+
+
+7
+
+SELECT ename, sal+ISNULL(comm,0) as total
+FROM emp
+
+
+8
+
+SELECT ename, sal
+FROM emp
+WHERE JOB = 'MANAGER'
+
+
+9
+
+SELECT ename, sal
+FROM emp
+WHERE ENAME LIKE '__o%'
+
+10
+
+
+
+SELECT ename, sal ,JOB
+FROM emp
+WHERE JOB = 'SALESMAN' OR JOB = 'MANAGER'
+
+
+
+11
+
+
+
+SELECT ename
+FROM emp
+WHERE COMM IS NULL
+
+
+12
+
+
+SELECT ename ,SAL ,COMM
+FROM emp
+WHERE COMM IS NOT NULL
+
+
+13
+
+
+SELECT ename ,SAL  
+FROM emp
+ORDER BY SAL DESC
+
+
+14
+
+```
+
+```
+SELECT MAX(SAL) AS '最高工资' , min(sal) as '最低工资'
+FROM emp
+
+
+
+15
+
+SELECT avg (sal) as '平均工资',SUM(sal) as '总计工资'
+FROM emp
+
+
+
+16
+
+SELECT  ROUND(CAST (COUNT (COMM)AS FLOAT)/COUNT(*),12)
+FROM emp
+
+
+17
+SELECT  JOB,AVG(SAL) AS AVERAGE
+FROM emp
+GROUP BY JOB
+
+18
+
+
+SELECT  DEPTNO,JOB,AVG(SAL) AS AVERAGE,MAX(SAL)
+FROM emp
+GROUP BY DEPTNO,JOB
+
+
+19
+
+SELECT  DEPTNO,AVG(SAL) AS AVERAGE,MAX(SAL) AS MAX
+FROM emp
+GROUP BY DEPTNO HAVING AVG(SAL)<2500
+
+
+
+20
+
+
+SELECT  DEPTNO,AVG(SAL) AS AVERAGE,MAX(SAL) AS MAX
+FROM emp
+GROUP BY DEPTNO HAVING AVG(SAL)<2500
+ORDER BY AVG(SAL) ASC
+
+
+
+
+
+```

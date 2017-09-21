@@ -102,12 +102,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../SQL Server/">
+        <li class="chapter " data-level="1.2" data-path="../SQL/">
             
-                <a href="../SQL Server/">
+                <a href="../SQL/">
             
                     
-                    SQL Server
+                    SQL
             
                 </a>
             
@@ -116,12 +116,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../SQL Server/Note.html">
+        <li class="chapter " data-level="1.2.1" data-path="../SQL/">
             
-                <a href="../SQL Server/Note.html">
+                <a href="../SQL/">
             
                     
-                    Note
+                    SQL_Note
             
                 </a>
             
@@ -161,9 +161,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../SQL Server/">
+        <li class="chapter " data-level="1.2.2" data-path="../SQL/">
             
-                <a href="../SQL Server/">
+                <a href="../SQL/">
             
                     
                     HomeWork
@@ -217,7 +217,7 @@
                 <a href="../计算几何与计算机图形学/">
             
                     
-                    Note
+                    CG_Note
             
                 </a>
             
@@ -364,7 +364,7 @@
                 <a href="../网络信息安全概论/">
             
                     
-                    Note
+                    Secutity_Note
             
                 </a>
             
@@ -557,8 +557,61 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="bmpnote">BmpNote</h1>
+                                <pre><code>
 
+typedef unsigned char BYTE;   
+typedef unsigned short WORD;
+typedef unsigned long DWORD;
+typedef long LONG;
+
+//    //&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#xFF0C;&#x4ECE;&#x4E0B;&#x5230;&#x4E0A;&#x626B;&#x63CF;
+//BITMAPFILEHEADER:
+//    14 Byte;
+//BITMAPINFORMATION:
+//    40 Byte;
+//    //24&#x4F4D;&#x771F;&#x5F69;&#x8272;&#x56FE;BMP&#x6CA1;&#x6709;&#x8C03;&#x8272;&#x677F;
+//    //&#x4F4D;&#x56FE;&#x6570;&#x636E;
+//    //&#x50CF;&#x7D20; BGR
+
+
+typedef struct tagBITMAPFILEHEADER{
+    //&#x5171;14Byte 2+4+2+2+4
+
+    WORD bType;            //&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#xFF0C;&#x5FC5;&#x987B;&#x662F;0x42 (B,&#x4F4E;&#x5B57;&#x8282;), 0x4D (M,&#x9AD8;&#x5B57;&#x8282;) 0x4D42
+    DWORD bfSize;        //&#x6587;&#x4EF6;&#x5927;&#x5C0F;
+    WORD bfReserved1;    //&#x4FDD;&#x7559;&#x5B57;&#xFF0C;&#x4E0D;&#x8003;&#x8651;&#xFF1F;
+    WORD bfReserved2;    //&#x4FDD;&#x7559;&#x5B57;&#xFF0C;+1&#xFF1B;
+    DWORD bfOffBits;    //&#x504F;&#x79FB;&#x91CF;&#xFF0C;&#x672C;&#x6B21;&#x4F7F;&#x7528;&#x7684;&#x662F;54
+}BITMAPFILEHEADER;
+
+typedef struct tagBITMAPINFOHEADER {
+    //40Byte  4+4+4+2+2+4+4+4+4+4+4
+
+    DWORD biSize;            //&#x7ED3;&#x6784;&#x4F53;tagBITMAPINFOHEADER&#x6240;&#x5360;&#x5B57;&#x8282;&#x6570;
+    LONG biWidth;            //&#x56FE;&#x50CF;&#x5BBD;&#x5EA6; pixel
+    LONG biHeight;            //&#x9AD8;&#x5EA6; pixel
+    WORD biPlanes;            //&#x76EE;&#x6807;&#x8BBE;&#x5907;&#x7EA7;&#x522B;&#xFF1F;===1
+    WORD biBitCount;        //&#x672C;&#x6B21;&#x4E3A;24&#x4F4D;&#x771F;&#x5F69;&#x56FE;
+        //&#x6BCF;&#x4E2A;&#x50CF;&#x7D20;&#x6240;&#x9700;&#x4F4D;&#x6570;
+            // 1&#x4F4D; --&#x9ED1;&#x767D;
+            // 4&#x3001;8&#x3001;256
+    DWORD biCompression;    //&#x538B;&#x7F29;&#x7C7B;&#x578B;
+        // 0 --&#x4E0D;&#x538B;&#x7F29;
+        // 1 --BI_RLE8
+        // 2 --BI_RLE4
+    DWORD biSizeImage;        //&#x4F4D;&#x56FE;&#x6570;&#x636E;&#x5927;&#x5C0F; biWidth * biHeight (biWidth&#x8865;&#x9F50;4&#x7684;&#x500D;&#x6570;)
+    LONG biXPelsPerMeter;    //&#x6C34;&#x5E73;&#x5206;&#x8FA8;&#x7387;
+    LONG biYPelsPermeter;    //&#x5782;&#x76F4;&#x5206;&#x8FA8;&#x7387;
+    DWORD biClrUsed;        //&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x989C;&#x8272;&#x6570;
+    DWORD biClrImportant;    //&#x91CD;&#x8981;&#x989C;&#x8272;&#x6570; 0--all
+}BITMAPINFOHEADER;
+
+
+//&#x5B66;&#x4E60;
+void *memset(void *s, int ch, size_t  n)
+//&#x5C06;s&#x4E2D;&#x7684;&#x524D;n&#x4E2A;&#x5B57;&#x8282;&#x7528;ch&#x66FF;&#x6362;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;s
+//&#x5934;&#x6587;&#x4EF6; #include&lt;string.h&gt; or &lt;memory.h&gt;
+</code></pre>
                                 
                                 </section>
                             
@@ -601,7 +654,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"BmpNote","level":"1.4.1.1","depth":3,"next":{"title":"ReadBmp","level":"1.4.1.2","depth":3,"path":".BMP/ReadBmp.md","ref":".BMP/ReadBmp.md","articles":[]},"previous":{"title":".BMP","level":"1.4.1","depth":2,"path":"数字媒体导论/README.md","ref":"数字媒体导论/README.md","articles":[{"title":"BmpNote","level":"1.4.1.1","depth":3,"path":".BMP/BmpNote.md","ref":".BMP/BmpNote.md","articles":[]},{"title":"ReadBmp","level":"1.4.1.2","depth":3,"path":".BMP/ReadBmp.md","ref":".BMP/ReadBmp.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":".BMP/BmpNote.md","mtime":"2017-09-21T13:13:57.865Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-21T13:47:17.555Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"BmpNote","level":"1.4.1.1","depth":3,"next":{"title":"ReadBmp","level":"1.4.1.2","depth":3,"path":".BMP/ReadBmp.md","ref":".BMP/ReadBmp.md","articles":[]},"previous":{"title":".BMP","level":"1.4.1","depth":2,"path":"数字媒体导论/README.md","ref":"数字媒体导论/README.md","articles":[{"title":"BmpNote","level":"1.4.1.1","depth":3,"path":".BMP/BmpNote.md","ref":".BMP/BmpNote.md","articles":[]},{"title":"ReadBmp","level":"1.4.1.2","depth":3,"path":".BMP/ReadBmp.md","ref":".BMP/ReadBmp.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":".BMP/BmpNote.md","mtime":"2017-09-21T14:23:48.271Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-21T14:52:18.151Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
