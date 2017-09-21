@@ -1,0 +1,443 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>firsthomework · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../计算几何与计算机图形学/" />
+    
+    
+    <link rel="prev" href="SQLServerNote.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    SQL Server
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="LearnMySql.html">
+            
+                <a href="LearnMySql.html">
+            
+                    
+                    LearnMySql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="SQLServerNote.html">
+            
+                <a href="SQLServerNote.html">
+            
+                    
+                    SQLServerNote
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="firsthomework.html">
+            
+                <a href="firsthomework.html">
+            
+                    
+                    firsthomework
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../计算几何与计算机图形学/">
+            
+                <a href="../计算几何与计算机图形学/">
+            
+                    
+                    计算几何与计算机图形学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../计算几何与计算机图形学/Gauss-Bonnet.html">
+            
+                <a href="../计算几何与计算机图形学/Gauss-Bonnet.html">
+            
+                    
+                    Gauss-Bonnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >firsthomework</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <pre><code>4
+
+SELECT ENAME,JOB,HIREDATE,SAL
+FROM EMP
+WHERE DEPTNO = 10
+
+
+
+5
+
+SELECT DISTINCT JOB
+FROM EMP
+
+6
+
+SELECT ename,sal*12+isnull(comm,0)*12 as &quot;Salary Of Year&quot;
+FROM EMP
+
+
+7
+
+SELECT ename, sal+ISNULL(comm,0) as total
+FROM emp
+
+
+8
+
+SELECT ename, sal
+FROM emp
+WHERE JOB = &apos;MANAGER&apos;
+
+
+9
+
+SELECT ename, sal
+FROM emp
+WHERE ENAME LIKE &apos;__o%&apos;
+
+10
+
+
+
+SELECT ename, sal ,JOB
+FROM emp
+WHERE JOB = &apos;SALESMAN&apos; OR JOB = &apos;MANAGER&apos;
+
+
+
+11
+
+
+
+SELECT ename
+FROM emp
+WHERE COMM IS NULL
+
+
+12
+
+
+SELECT ename ,SAL ,COMM
+FROM emp
+WHERE COMM IS NOT NULL
+
+
+13
+
+
+SELECT ename ,SAL  
+FROM emp
+ORDER BY SAL DESC
+
+
+14
+</code></pre><pre><code>SELECT MAX(SAL) AS &apos;&#x6700;&#x9AD8;&#x5DE5;&#x8D44;&apos; , min(sal) as &apos;&#x6700;&#x4F4E;&#x5DE5;&#x8D44;&apos;
+FROM emp
+
+
+
+15
+
+SELECT avg (sal) as &apos;&#x5E73;&#x5747;&#x5DE5;&#x8D44;&apos;,SUM(sal) as &apos;&#x603B;&#x8BA1;&#x5DE5;&#x8D44;&apos;
+FROM emp
+
+
+
+16
+
+SELECT  ROUND(CAST (COUNT (COMM)AS FLOAT)/COUNT(*),12)
+FROM emp
+
+
+17
+SELECT  JOB,AVG(SAL) AS AVERAGE
+FROM emp
+GROUP BY JOB
+
+18
+
+
+SELECT  DEPTNO,JOB,AVG(SAL) AS AVERAGE,MAX(SAL)
+FROM emp
+GROUP BY DEPTNO,JOB
+
+
+19
+
+SELECT  DEPTNO,AVG(SAL) AS AVERAGE,MAX(SAL) AS MAX
+FROM emp
+GROUP BY DEPTNO HAVING AVG(SAL)&lt;2500
+
+
+
+20
+
+
+SELECT  DEPTNO,AVG(SAL) AS AVERAGE,MAX(SAL) AS MAX
+FROM emp
+GROUP BY DEPTNO HAVING AVG(SAL)&lt;2500
+ORDER BY AVG(SAL) ASC
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="SQLServerNote.html" class="navigation navigation-prev " aria-label="Previous page: SQLServerNote">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../计算几何与计算机图形学/" class="navigation navigation-next " aria-label="Next page: 计算几何与计算机图形学">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"firsthomework","level":"1.2.3","depth":2,"next":{"title":"计算几何与计算机图形学","level":"1.3","depth":1,"path":"计算几何与计算机图形学/README.md","ref":"计算几何与计算机图形学/README.md","articles":[{"title":"Gauss-Bonnet","level":"1.3.1","depth":2,"path":"计算几何与计算机图形学/Gauss-Bonnet.md","ref":"计算几何与计算机图形学/Gauss-Bonnet.md","articles":[]}]},"previous":{"title":"SQLServerNote","level":"1.2.2","depth":2,"path":"SQL/SQLServerNote.md","ref":"SQL/SQLServerNote.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SQL/firsthomework.md","mtime":"2017-09-21T12:20:20.619Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-21T12:39:17.145Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
