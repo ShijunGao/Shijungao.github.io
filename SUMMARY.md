@@ -1,11 +1,11 @@
 # Summary
 
 * [Introduction](README.md)
-* [SQL Server](SQL Server/README.md)
-    * [Note](SQL Server/Note.md)
+* [SQL](SQL/README.md)
+    * [Note](SQL/Note.md)
         * [LearnMySql](Note/LearnMySql.md)
         * [SQLServerNote](Note/SQLServerNote.md)
-    * [HomeWork](SQL Server/README.md)
+    * [HomeWork](SQL/README.md)
         * [Firsthomework](HomeWork/firsthomework.md)
 * [计算几何与计算机图形学](计算几何与计算机图形学/README.md)
     * [Note](计算几何与计算机图形学/README.md)
