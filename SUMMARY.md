@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [SQL](SQL/README.md)
-    * [Note](SQL/Note.md)
+    * [Note](SQL/README.md)
         * [LearnMySql](Note/LearnMySql.md)
         * [SQLServerNote](Note/SQLServerNote.md)
     * [HomeWork](SQL/README.md)
