@@ -5,7 +5,7 @@ Gary's Blog
 
 [Code on Github](https://github.com/ShijunGao/Shijungao.github.io)
 
-[在线阅读](http://StudyInDUT.com)
+[在线阅读](http://www.StudyInDUT.com)
 
 文档目录
 ----
@@ -39,19 +39,17 @@ Gary's Blog
 
 参考资料
 ----
-1. [只是一条咸鱼][http://www.knowncold.me/]
+1. [只是一条咸鱼](http://www.knowncold.me/)
 
 友情链接
 ----
-1. [只是一条咸鱼][http://www.knowncold.me/]
-2. [郭昊东的个人博客][https://cococolin.github.io/]
-3. [雨中漫步][http://chaomaer.github.io/]
-4. [孙师爷的博客][https://luffybysunny.github.io/]
+1. [只是一条咸鱼](http://www.knowncold.me/)
+2. [郭昊东的个人博客](https://cococolin.github.io/)
+3. [雨中漫步](http://chaomaer.github.io/)
+4. [孙师爷的博客](https://luffybysunny.github.io/)
 
 
 共享协议
 ----
 
-本页均由 [Gary][mailto:SJGDUT@qq.com] 整理并在 [CC BY-SA 3.0][CC] 协议下发布，主要为了给自己作为学习的入门及参考资料。
-[Gary]: https://github.com/ShijunGao "Github"
-[CC]: http://zh.wikipedia.org/wiki/Wikipedia:CC "Wiki: CC"
+本页均由 [Gary](mailto:SJGDUT@qq.com) 整理并在 [CC BY-SA 3.0][CC] 协议下发布，主要为了给自己作为学习的入门及参考资料。
