@@ -1,3 +1,6 @@
-Here is my SQL note, and I also will share some knowledge about SQL.
+>数据库概论
 
-Besides, I'd like to tell you some intersting things happened in my SQL class.
+* 大三上
+* another 必修
+* 本学期较为轻松的科目
+* 每个老师的蜜汁上机

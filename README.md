@@ -1,11 +1,11 @@
 Gary's Blog
 ====
 
->[Home](https://www.StudyInDUT.com)
+>[Home](shijungao.github.io)
 
 [Code on Github](https://github.com/ShijunGao/Shijungao.github.io)
 
-[在线阅读](http://www.StudyInDUT.com)
+[在线阅读](shijungao.github.io)
 
 文档目录
 ----

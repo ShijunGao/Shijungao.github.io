@@ -1,6 +1,6 @@
 *About This Pages*
 
->[SUMMARY](http://www.studyindut.com/)
+>[SUMMARY](SUMMARY.md)
 
 
 *About Me*
@@ -11,7 +11,7 @@
 * 日常扯淡刷知乎看微博膜大佬
 
 *You Can Find me*
-* [微博]()
+* [微博](http://weibo.com/u/5017063539?refer_flag=1001030201_)
 * [Email](mailto:SJGDUT@qq.com)
-* [Twitter]()
-* [Facebook]()
+* [Twitter](https://twitter.com/Gao_Shijun)
+* [Facebook](https://www.facebook.com/profile.php?id=100012094897439)

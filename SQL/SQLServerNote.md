@@ -36,6 +36,7 @@
 * isnull()==nvl()
 * sal*12+isnull(comm ,0 ) as "Salary Of Year"
 * WHERE ENAME LIKE '__o%'
+
 * ORDER BY ID DESE OR ASC
 * MAX()   MIN()
 * ROUND( CAST ( COUNT (COMM) AS FLOAT) )/COUNT(*),12)
