@@ -1,2 +1,0 @@
-# Gauss-Bonnet
-

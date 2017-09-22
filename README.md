@@ -1,7 +1,7 @@
 Gary's Blog
 ====
 
->[Home](https://StudyInDUT.com)
+>[Home](https://www.StudyInDUT.com)
 
 [Code on Github](https://github.com/ShijunGao/Shijungao.github.io)
 
@@ -10,7 +10,7 @@ Gary's Blog
 文档目录
 ----
 
-* [About This Page](README.md)
+* [About](About.md)
 * [git](git/README.md)
     * [LearnGit](git/gitnote.md)
 * [C++](C++/README.md)
@@ -29,7 +29,7 @@ Gary's Blog
 * [CG_Note](计算几何与计算机图形学/README.md)
     * [Gauss-Bonnet](计算几何与计算机图形学/Gauss-Bonnet.md)
 * [SQL_Note](SQL/README.md)
-    * [LearnMySql](SQL/LearnMySql.md)
+    * [SQL Server on Docker](SQL/LearnMySql.md)
     * [SQLServerNote](SQL/SQLServerNote.md)
 * [SQL_HomeWork](SQL/README.md)
     * [Firsthomework](SQL/firsthomework.md)
