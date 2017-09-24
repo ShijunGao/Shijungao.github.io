@@ -507,6 +507,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.13" data-path="../随笔/">
+            
+                <a href="../随笔/">
+            
+                    
+                    随笔
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -552,7 +565,74 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h4 id="sql-server-note">SQL Server Note</h4>
+                                <ul>
+<li>DDL&#xFF1A; <em>&#x6539;&#x53D8;&#x8868;&#x7ED3;&#x6784;</em></li>
+<li>DML&#xFF1A; <em>&#x9488;&#x5BF9;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x4EE5;&#x56DE;&#x9000;</em></li>
+<li>&#x8D85;&#x7801;<ul>
+<li>&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5C5E;&#x6027;&#x96C6;&#x5408;</li>
+<li>&#x53EF;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;</li>
+</ul>
+</li>
+<li>&#x5019;&#x9009;&#x7801;<ul>
+<li>&#x6700;&#x5C0F;&#x8D85;&#x7801;</li>
+</ul>
+</li>
+<li>&#x4E3B;&#x7801;<ul>
+<li>&#x5019;&#x9009;&#x7801;</li>
+<li>&#x81EA;&#x5B9A;&#x4E49;</li>
+</ul>
+</li>
+<li>&#x5916;&#x7801;<ul>
+<li>&#x5173;&#x7CFB;r1&#x7684;&#x5C5E;&#x6027;e</li>
+<li>e&#x4E3A;&#x5173;&#x7CFB;r2&#x7684;&#x4E3B;&#x7801;</li>
+<li>e&#x5373;&#x4E3A;r1&#x4E0A;&#x53C2;&#x7167;r2&#x7684;&#x5916;&#x7801;</li>
+<li>r1&#x4E3A;e&#x4F9D;&#x8D56;&#x7684;&#x53C2;&#x7167;&#x5173;&#x7CFB;</li>
+<li>r2&#x4E3A;e&#x7684;&#x88AB;&#x53C2;&#x7167;&#x5173;&#x7CFB;<pre><code class="lang-txt">&#x8FD0;&#x52A8;&#x5458;&#x56FD;&#x7C4D;&#x4EE3;&#x7801;&#x4E0E;&#x56FD;&#x5BB6;&#x8868;
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<p><em>&#x6570;&#x636E;&#x7C7B;&#x578B;</em></p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>char(n)</td>
+<td>&#x957F;&#x5EA6;&#x4E3A;n&#x7684;&#x5B57;&#x7B26;&#x4E32;</td>
+</tr>
+<tr>
+<td>varchar(n)</td>
+<td>&#x6700;&#x5927;&#x957F;&#x5EA6;&#x4E3A;n&#x7684;&#x53EF;&#x53D8;&#x957F;</td>
+</tr>
+<tr>
+<td>int</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>numeric(p,d)</td>
+<td>p&#x4F4D;&#xFF0C;d&#x4F4D;&#x5C0F;&#x6570;</td>
+</tr>
+<tr>
+<td>FLOAT(n)</td>
+<td>&#x7CBE;&#x5EA6;&#x81F3;&#x5C11;&#x4E3A;n</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-DDL">CREATE table inventory
+      ( id int,
+        name varchar(20)
+        primary key (id) not null);
+INSERT INTO inventory
+    VALUES(1,&apos;Apple&apos;)
+INSERT INTO inventory
+    VALUES(2,&apos;Banana&apos;)
+</code></pre>
 <h5 id="inventory-"><em> inventory </em></h5>
 <table>
 <thead>
@@ -572,15 +652,44 @@
 </tr>
 </tbody>
 </table>
+<p><em>&#x987A;&#x5E8F;</em></p>
+<pre><code class="lang-DML">SELECT
+
+FROM
+
+WHERE
+
+GROUP BY
+
+HAVING
+
+ORDER BY
+</code></pre>
 <ul>
 <li>SELECT<pre><code class="lang-DML">SELECT id FROM inventory
 SELECT * FROM inventory        //SELECT ALL
 SELECT DISTINCT * FROM inventory      //&#x53BB;&#x91CD;&#xFF0C;&#x653E;&#x5728;&#x5217;&#x4E4B;&#x524D;
 </code></pre>
 </li>
-<li>WHERE<pre><code class="lang-DML">//&#x6761;&#x4EF6;
+<li><p>WHERE</p>
+<pre><code class="lang-DML">//&#x6761;&#x4EF6;
 SELECT * FROM inventory
 WHERE id = 1  ||  WHERE name = &apos;Apple&apos;  ||  WHERE name is null
+</code></pre>
+</li>
+<li><p>DELETE</p>
+<pre><code class="lang-DDL">DELETE FROM inventory
+WHERE id =1;                //delete mete
+DELETE FROM inventory;    //&#x4FDD;&#x7559;&#x5173;&#x7CFB;
+</code></pre>
+</li>
+<li><p>DROP</p>
+<pre><code class="lang-DDL">DROP TABLE inventory      //delete ALL
+</code></pre>
+</li>
+<li><p>ALTER</p>
+<pre><code class="lang-DDL">ALTER TABLE inventory A D;
+ALTER TABLE DROP A;
 </code></pre>
 </li>
 </ul>
@@ -600,40 +709,98 @@ WHERE id = 1  ||  WHERE name = &apos;Apple&apos;  ||  WHERE name is null
 <td>like</td>
 <td>&#x81EA;&#x5B9A;&#x4E49;</td>
 </tr>
+<tr>
+<td>between</td>
+<td>&lt;= AND &gt;=</td>
+</tr>
 </tbody>
 </table>
 <ul>
-<li>AND OR<ul>
-<li>NULL AND TRUE =NULL</li>
-<li>NULL OR  FALSE= NULL</li>
+<li><p>AND OR</p>
+<pre><code class="lang-DML">NULL AND TRUE == NULL
+NULL OR  FALSE == NULL
+</code></pre>
+</li>
+<li><p>ORDER BY</p>
+<pre><code class="lang-DML">ORDER BY id;
+ORDER BY 1,2;   //1&#x76F8;&#x540C;&#x6392;2
+ORDER BY 1 DESE;  //&#x964D;&#x5E8F;
+ORDER BY 1 ASC ;  //&#x5347;&#x5E8F;
+</code></pre>
+<p><em>LIKE</em></p>
+<pre><code class="lang-DML">  WHERE name LIKE &apos;Ap%&apos;;
+  WHERE name LIKE &apos;__%&apos;;
+  WHERE name LIKE &apos;A\%&apos; escape &apos;\&apos;;   \\  &apos;\&apos;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;
+</code></pre>
+</li>
+</ul>
+<p><em>&#x5904;&#x7406;&#x7A7A;&#x503C;</em></p>
+<pre><code class="lang-DML">  isnull(comm,0)
+  //&#x5B50;&#x51FD;&#x6570;&#x5FFD;&#x7565;&#x7A7A;&#x503C;
+</code></pre>
+<p><em>&#x96C6;&#x5408;&#x8FD0;&#x7B97;</em></p>
+<pre><code class="lang-DML">  //&#x5E76;
+  union   //&#x53BB;&#x91CD;&#xFF0C;&#x5347;&#x5E8F;
+  union all //&#x7B80;&#x5355;&#x7EC4;&#x5408;
+  //&#x4EA4;
+  intersect
+  //&#x5DEE;
+  except
+</code></pre>
+<p><em>&#x805A;&#x96C6;&#x51FD;&#x6570;</em></p>
+<pre><code class="lang-DML">  AVG();
+  MIN();
+  MAX();
+  sum();
+  COUNT();
+  //&#x5FFD;&#x7565;null  except COUNT(*);
+</code></pre>
+<p><em>&#x5206;&#x7EC4;&#x805A;&#x96C6;</em></p>
+<pre><code class="lang-DML">  GROUP BY 2,3;
+  SELECT
+    - &#x7EC4;&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x5B57;&#x6BB5;
+    - GROUP BY &#x540E;&#x7684;&#x5B57;&#x6BB5;
+    - HAVING &#x6761;&#x4EF6;
+    GROUP BY DEPTON HAVING AVG(sal)&lt;2500
+</code></pre>
+<p><em>&#x522B;&#x540D;</em></p>
+<pre><code class="lang-DML">  sal*12+isnull(comm ,0 ) as &quot;Salary Of Year&quot;
+</code></pre>
+<p><em>&#x5D4C;&#x5957;&#x5B50;&#x67E5;&#x8BE2;</em></p>
+<ul>
+<li>&#x72EC;&#x7ACB;&#x5B50;&#x67E5;&#x8BE2;<pre><code class="lang-DML">SELECT id
+FROM inventory
+WHERE name=(SELECT name
+            FROM inventory
+            WHERE name=&apos;Apple&apos;);
+</code></pre>
+</li>
+<li>&#x76F8;&#x5173;&#x5B50;&#x67E5;&#x8BE2;<pre><code class="lang-DML">SELECT id
+FROM inventory e             //&#x522B;&#x540D; e
+WHERE name=(SELECT name
+          FROM inventory
+          WHERE e.name=&apos;Apple&apos;);
+</code></pre>
+</li>
+<li>in<ul>
+<li>= ANY</li>
 </ul>
 </li>
-<li>ORDER BY<ul>
-<li>ORDER BY 3,2</li>
+<li>not in<pre><code class="lang-DML">500 not in (1000,3000,null)
+</code></pre>
+</li>
+<li><blockquote>
+<p>ALL</p>
+</blockquote>
+</li>
+<li>exists</li>
+<li>not exists</li>
 </ul>
-</li>
-<li>INSERT<ul>
-<li>INSERT INTO inventory VALUES (3, &apos; Banana&apos;)</li>
-</ul>
-</li>
-<li><p>GROUP BY</p>
-</li>
-<li><p>isnull()==nvl()</p>
-</li>
-<li>sal*12+isnull(comm ,0 ) as &quot;Salary Of Year&quot;</li>
-<li><p>WHERE ENAME LIKE &apos;__o%&apos;</p>
-</li>
-<li><p>ORDER BY ID DESE OR ASC</p>
-</li>
-<li>MAX()   MIN()</li>
-<li>ROUND( CAST ( COUNT (COMM) AS FLOAT) )/COUNT(*),12)<ul>
-<li>ROUND(NUM,12)</li>
-<li>CAST(INT AS FLOAT)</li>
-</ul>
-</li>
-<li>GROUP BY DEPTON HAVING AVG(sal)&lt;2500<ul>
-<li>HAVING</li>
-</ul>
+<ul>
+<li>&#x77E5;&#x8BC6;&#x70B9;<pre><code class="lang-DML">* ROUND( CAST ( COUNT (COMM) AS FLOAT) )/COUNT(*),12)
+  * ROUND(NUM,12)       //&#x4FDD;&#x7559;&#x5C0F;&#x6570;&#x70B9;&#x540E;12&#x4F4D;
+  * CAST(INT AS FLOAT)  //&#x7C7B;&#x578B;&#x5F3A;&#x5236;&#x8F6C;&#x6362;
+</code></pre>
 </li>
 </ul>
 
@@ -679,7 +846,7 @@ WHERE id = 1  ||  WHERE name = &apos;Apple&apos;  ||  WHERE name is null
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SQLServerNote","level":"1.9.2","depth":2,"next":{"title":"SQL_HomeWork","level":"1.10","depth":1,"path":"SQL/README.md","ref":"SQL/README.md","articles":[{"title":"Firsthomework","level":"1.10.1","depth":2,"path":"SQL/firsthomework.md","ref":"SQL/firsthomework.md","articles":[]}]},"previous":{"title":"LearnMySql","level":"1.9.1","depth":2,"path":"SQL/LearnMySql.md","ref":"SQL/LearnMySql.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SQL/SQLServerNote.md","mtime":"2017-09-22T14:41:29.729Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-22T14:49:58.996Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SQLServerNote","level":"1.9.2","depth":2,"next":{"title":"SQL_HomeWork","level":"1.10","depth":1,"path":"SQL/README.md","ref":"SQL/README.md","articles":[{"title":"Firsthomework","level":"1.10.1","depth":2,"path":"SQL/firsthomework.md","ref":"SQL/firsthomework.md","articles":[]}]},"previous":{"title":"LearnMySql","level":"1.9.1","depth":2,"path":"SQL/LearnMySql.md","ref":"SQL/LearnMySql.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SQL/SQLServerNote.md","mtime":"2017-09-23T09:01:24.242Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-23T09:02:53.721Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
