@@ -12,6 +12,7 @@
 * [.BMP](数字媒体导论/README.md)
     * [BmpNote](数字媒体导论/BmpNote.md)
     * [ReadBmp](数字媒体导论/ReadBmp.md)
+    * [Note](数字媒体导论/Note.md)
 * [Phone](Phone/README.md)
     * [iPhone](Phone/iPhone.md)
     * [华为](Phone/华为.md)
