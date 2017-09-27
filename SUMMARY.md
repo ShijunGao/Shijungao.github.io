@@ -21,6 +21,7 @@
     * [170912](MonFocus/FirstWeek.md)
 * [CG_Note](计算几何与计算机图形学/README.md)
     * [Gauss-Bonnet](计算几何与计算机图形学/Gauss-Bonnet.md)
+    * [三角剖分](计算几何与计算机图形学/三角剖分.md)
 * [SQL_Note](SQL/README.md)
     * [LearnMySql](SQL/LearnMySql.md)
     * [SQLServerNote](SQL/SQLServerNote.md)
