@@ -7,6 +7,11 @@ Gary's Blog
 
 [在线阅读](https://shijungao.github.io)
 
+*更新*
+
+* [推荐](qcloud_Tencent/README.md)
+
+
 文档目录
 ----
 
