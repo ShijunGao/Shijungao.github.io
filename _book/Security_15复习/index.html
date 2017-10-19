@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>palinderomeNumber · GitBook</title>
+        <title>Security_15 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../数字媒体导论/" />
+    <link rel="next" href="第一章.html" />
     
     
-    <link rel="prev" href="longest.html" />
+    <link rel="prev" href="../随笔/" />
     
 
     </head>
@@ -167,9 +167,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="./">
+        <li class="chapter " data-level="2.4" data-path="../C++/">
             
-                <a href="./">
+                <a href="../C++/">
             
                     
                     C++
@@ -181,9 +181,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.4.1" data-path="FindMissing.html">
+        <li class="chapter " data-level="2.4.1" data-path="../C++/FindMissing.html">
             
-                <a href="FindMissing.html">
+                <a href="../C++/FindMissing.html">
             
                     
                     FindMissing
@@ -194,9 +194,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.2" data-path="isSubtree.html">
+        <li class="chapter " data-level="2.4.2" data-path="../C++/isSubtree.html">
             
-                <a href="isSubtree.html">
+                <a href="../C++/isSubtree.html">
             
                     
                     isSubtree
@@ -207,9 +207,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.3" data-path="longest.html">
+        <li class="chapter " data-level="2.4.3" data-path="../C++/longest.html">
             
-                <a href="longest.html">
+                <a href="../C++/longest.html">
             
                     
                     longest
@@ -220,9 +220,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.4.4" data-path="palinderomeNumber.html">
+        <li class="chapter " data-level="2.4.4" data-path="../C++/palinderomeNumber.html">
             
-                <a href="palinderomeNumber.html">
+                <a href="../C++/palinderomeNumber.html">
             
                     
                     palinderomeNumber
@@ -566,9 +566,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.14" data-path="../Security_15复习/">
+        <li class="chapter active" data-level="2.14" data-path="./">
             
-                <a href="../Security_15复习/">
+                <a href="./">
             
                     
                     Security_15
@@ -580,9 +580,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.14.1" data-path="../Security_15复习/第一章.html">
+        <li class="chapter " data-level="2.14.1" data-path="第一章.html">
             
-                <a href="../Security_15复习/第一章.html">
+                <a href="第一章.html">
             
                     
                     第一章
@@ -593,9 +593,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.14.2" data-path="../Security_15复习/第二章.html">
+        <li class="chapter " data-level="2.14.2" data-path="第二章.html">
             
-                <a href="../Security_15复习/第二章.html">
+                <a href="第二章.html">
             
                     
                     第二章
@@ -641,7 +641,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >palinderomeNumber</a>
+        <a href=".." >Security_15</a>
     </h1>
 </div>
 
@@ -656,37 +656,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <pre><code class="lang-C++"><span class="hljs-keyword">class</span> Solution {
-
-<span class="hljs-keyword">public</span>:
-    <span class="hljs-comment">/**
-     * @param num a positive number
-     * @return true if it&apos;s a palindrome or false
-     */</span>
-    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">palindromeNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span> num)</span> </span>{
-        <span class="hljs-comment">// Write your code here</span>
-        <span class="hljs-keyword">if</span> (num &lt; <span class="hljs-number">0</span>) {
-            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
-        }
-        <span class="hljs-keyword">if</span> (num &gt;= <span class="hljs-number">10</span>) {
-            <span class="hljs-keyword">int</span> a[<span class="hljs-number">32</span>];                            <span class="hljs-comment">//&#x5F00;&#x59CB;&#x7528;&#x7684;stack&#xFF0C;&#x60F3;&#x60F3;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E5F;&#x5C31;&#x89E3;&#x51B3;&#x4E86;</span>
-            <span class="hljs-keyword">int</span> temp = num;
-            <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;
-            <span class="hljs-keyword">for</span> (i; temp != <span class="hljs-number">0</span>; i++) {
-                a[i] = temp % <span class="hljs-number">10</span>;
-                temp = temp / <span class="hljs-number">10</span>;
-            }
-            i--;
-            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> m = <span class="hljs-number">0</span>; m != i&amp;&amp;(i+<span class="hljs-number">1</span>!=m); m++) {            <span class="hljs-comment">//&#x6CE8;&#x610F;i&#x4E3A;&#x5947;&#x6570;&#x7684;&#x60C5;&#x51B5;</span>
-                <span class="hljs-keyword">if</span> (a[m] != a[i])
-                    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
-                i--;
-            }
-        }
-        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
-    }
-};
-</code></pre>
+                                <h1 id="security15">Security_15</h1>
+<ul>
+<li><a href="Security_15&#x590D;&#x4E60;/&#x7B2C;&#x4E00;&#x7AE0;.md">&#x7B2C;&#x4E00;&#x7AE0;</a></li>
+<li><a href="Security_15&#x590D;&#x4E60;/&#x7B2C;&#x4E8C;&#x7AE0;.md">&#x7B2C;&#x4E8C;&#x7AE0;</a></li>
+</ul>
 
                                 
                                 </section>
@@ -714,12 +688,12 @@
 
             
                 
-                <a href="longest.html" class="navigation navigation-prev " aria-label="Previous page: longest">
+                <a href="../随笔/" class="navigation navigation-prev " aria-label="Previous page: 随笔">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../数字媒体导论/" class="navigation navigation-next " aria-label="Next page: .BMP">
+                <a href="第一章.html" class="navigation navigation-next " aria-label="Next page: 第一章">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -730,7 +704,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"palinderomeNumber","level":"2.4.4","depth":2,"next":{"title":".BMP","level":"2.5","depth":1,"path":"数字媒体导论/README.md","ref":"数字媒体导论/README.md","articles":[{"title":"BmpNote","level":"2.5.1","depth":2,"path":"数字媒体导论/BmpNote.md","ref":"数字媒体导论/BmpNote.md","articles":[]},{"title":"ReadBmp","level":"2.5.2","depth":2,"path":"数字媒体导论/ReadBmp.md","ref":"数字媒体导论/ReadBmp.md","articles":[]},{"title":"Note","level":"2.5.3","depth":2,"path":"数字媒体导论/Note.md","ref":"数字媒体导论/Note.md","articles":[]}]},"previous":{"title":"longest","level":"2.4.3","depth":2,"path":"C++/longest.md","ref":"C++/longest.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"C++/palinderomeNumber.md","mtime":"2017-09-21T13:33:21.250Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-19T02:11:49.151Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Security_15","level":"2.14","depth":1,"next":{"title":"第一章","level":"2.14.1","depth":2,"path":"Security_15复习/第一章.md","ref":"Security_15复习/第一章.md","articles":[]},"previous":{"title":"随笔","level":"2.13","depth":1,"path":"随笔/README.md","ref":"随笔/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Security_15复习/README.md","mtime":"2017-10-19T02:05:14.299Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-19T02:11:49.151Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
