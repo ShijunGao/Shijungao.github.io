@@ -30,6 +30,7 @@ Gary's Blog
 * [SQL_HomeWork](SQL/README.md)
 * [字幕检测](数字媒体导论/README.md)
 * [网络信息安全概论](网络信息安全概论/README.md)
+* [网络安全法律法规](网络安全法律法规/README.md)
 
 参考资料
 ----
